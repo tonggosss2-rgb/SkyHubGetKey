@@ -1,0 +1,58 @@
+<!DOCTYPE html><html>
+<head>
+<title>SkyHub Get Key</title>
+<style>
+body {
+    background: radial-gradient(circle, #0b0b1f, #000);
+    color: white;
+    text-align: center;
+    font-family: Arial;
+    overflow: hidden;
+}/* bintang */
+.star {
+position: absolute;
+width: 2px;
+height: 2px;
+background: white;
+animation: blink 2s infinite alternate;
+}
+
+@keyframes blink {
+from {opacity: 0.2;}
+to {opacity: 1;}
+}
+
+button {
+padding: 15px 25px;
+font-size: 18px;
+background: linear-gradient(45deg, purple, blue);
+color: white;
+border: none;
+border-radius: 10px;
+cursor: pointer;
+}
+
+.box {
+margin-top: 150px;
+}
+</style>
+
+</head><body><div class="box">
+    <h1>🌌 SkyHub Key System</h1>
+    <p>Klik tombol untuk mendapatkan key</p>
+    <button onclick="getKey()">Get Key</button>
+</div><script>
+// generate bintang
+for(let i=0;i<100;i++){
+    let star=document.createElement("div");
+    star.className="star";
+    star.style.top=Math.random()*100+"%";
+    star.style.left=Math.random()*100+"%";
+    document.body.appendChild(star);
+}
+
+function getKey() {
+    alert("KEY: SKYHUB-123");
+}
+</script></body>
+</html>
